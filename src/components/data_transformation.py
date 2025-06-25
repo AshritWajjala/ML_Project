@@ -23,7 +23,7 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         """
-        This fuction is responsible for Data tranformation of Numnerical and Categorical Features.
+        This fuction is responsible for Data tranformation of Numerical and Categorical Features.
         
         """
         try:
@@ -89,7 +89,7 @@ class DataTransformation:
             input_feature_train_arr = pre_processing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = pre_processing_obj.transform(input_feature_test_df)
         
-            # Concatinating scaled_input_feature_train_arr and target_feature_train_df (we don't scale test data) --> using np.c_
+            # Concatinating scaled_input_feature_train_arr and target_feature_train_df (we don't scale target data) --> using np.c_
             train_arr = np.c_[
                 input_feature_train_arr, np.array(target_feature_train_df)
             ]
@@ -98,12 +98,14 @@ class DataTransformation:
                 input_feature_test_arr, np.array(target_feature_test_df)
             ]
 
-            logging.info("Saved pre-processing objects.")
+
 
             save_object(file_path=self.data_transformation_config.preprocessor_obj_file_path,
                         obj=pre_processing_obj
             )
 
+            logging.info("Saved pre-processing objects.")
+            
             return (
                 train_arr,
                 test_arr

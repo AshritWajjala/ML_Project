@@ -48,7 +48,8 @@ class Modeltrainer:
                 "Random Forest Regressor": RandomForestRegressor(),
                 "XGBRegressor": XGBRegressor(), 
                 "CatBoosting Regressor": CatBoostRegressor(verbose=False),
-                "AdaBoost Regressor": AdaBoostRegressor()
+                "AdaBoost Regressor": AdaBoostRegressor(),
+                "Gradient Boosting": GradientBoostingRegressor()
             }
 
             params={
