@@ -43,25 +43,28 @@ A full-stack machine learning web application that predicts a student's **math s
 
 ## 📦 Project Structure
 
+```
 .
-├── app.py # Main Flask application
-├── templates/ # HTML templates for UI
-│ |── home.html
-| └── index.html
-├── artifacts/ # Stored models, preprocessors, logs
-│ ├── model.pkl
-│ ├── preprocessor.pkl
-│ └── logs/
-├── src/ # Source code for ML pipeline
-│ ├── init.py
-│ ├── data_ingestion.py
-│ ├── data_transformation.py
-│ ├── model_trainer.py
-│ ├── logger.py
-│ └── exception.py
-├── requirements.txt # Python dependencies
-├── Dockerfile # Docker container configuration
-├── README.md # Project documentation
+├── app.py                       # Main Flask application
+├── templates/                   # HTML templates for UI
+│   ├── home.html
+│   └── index.html
+├── artifacts/                   # Stored models, preprocessor, logs
+│   ├── model.pkl
+│   ├── preprocessor.pkl
+│   └── logs/
+├── src/                         # Source code for ML pipeline
+│   ├── __init__.py
+│   ├── data_ingestion.py
+│   ├── data_transformation.py
+│   ├── model_trainer.py
+│   ├── logger.py
+│   └── exception.py
+├── requirements.txt             # Python dependencies
+├── Dockerfile                   # Docker container configuration
+├── README.md                    # Project documentation
+└── .dockerignore                # Exclude unnecessary files from Docker image
+```
 
 ---
 
