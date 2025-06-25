@@ -58,4 +58,7 @@ if __name__ == '__main__':
 
 
     model_trainer = Modeltrainer()
-    print(model_trainer.initiate_model_trainer(train_array, test_array))
+    r2, hyp_r2 = model_trainer.initiate_model_trainer(train_array, test_array)
+    print(f"Best model r2 score (without hyper-parameter tuning): {r2*100:.2f}%")
+    print(f"Best model r2 score (with hyper-parameter tuning): {hyp_r2*100:.2f}%")
+
