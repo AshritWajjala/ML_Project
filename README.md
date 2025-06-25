@@ -49,7 +49,7 @@ A full-stack machine learning web application that predicts a student's **math s
 ├── templates/                   # HTML templates for UI
 │   ├── home.html
 │   └── index.html
-├── artifacts/                   # Stored models, preprocessor, logs
+├── artifacts/                   # Stored data, models, preprocessor, logs
 │   ├── model.pkl
 │   ├── preprocessor.pkl
 │   └── logs/
